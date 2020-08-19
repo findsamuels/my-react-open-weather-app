@@ -2,12 +2,13 @@
 @import './styles/main.scss';
 
 .App {
-min-width: 100vw;
+min-width: 100%;
 margin: 0 auto;
   box-sizing: border-box;
-  background-size: cover;
+ background-size: cover;
   background-repeat: no-repeat;
-  background-position: center !important;
+
+
  
 }
 

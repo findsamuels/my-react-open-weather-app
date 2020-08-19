@@ -88,12 +88,14 @@ h4{
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: .8;
 
     h4{
         color: $color-white;
         padding: 5rem;
         background-color: $color-grey;
         line-height: 3rem;
+        font-weight: lighter;
         
     }
 }
