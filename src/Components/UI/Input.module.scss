@@ -1,0 +1,35 @@
+@import '../../styles/main.scss';
+
+.inputSearch{
+position: absolute;
+margin: 1.5rem;
+z-index: 9;
+color: $color-grey;
+
+}
+
+.FormGroup{
+    position: relative;
+}
+
+input{
+    width: 100%;
+padding: 1rem 4rem;
+padding-right: 0;
+border: none ;
+color: rgb(75, 75, 75);
+outline: none;
+
+
+
+    
+
+
+}
+input::placeholder{
+    color: $color-grey;
+}
+
+.TextArea{
+
+}

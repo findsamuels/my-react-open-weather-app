@@ -1,0 +1,37 @@
+@import '../styles/main.scss';
+
+.WeatherSearch{
+    width: 50%;
+    margin: 5rem auto;
+position: relative;
+    @include respond(phone){
+        width: 60%;
+    }
+  }
+  
+
+  .locationAutoComplete{
+      width: 100%;
+      position: absolute;
+      background-color: $color-white;
+      border-top: .1rem $color-grey solid;
+      border-radius: 0 0 1rem 1rem;
+      
+      text-align: start;
+      top: 4rem;
+
+      li{
+          cursor: pointer;
+          list-style: none;
+          padding: 1rem;
+          width: 100%;
+         
+          &:last-child{
+            border-radius: 0 0 1rem 1rem;
+          }
+          &:hover{
+              background-color: $color-lightBlue;
+              color: $color-white;
+          }
+      }
+  }

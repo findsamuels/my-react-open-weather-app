@@ -1,0 +1,59 @@
+@mixin gradientBackground($color1, $color2){
+    background-image: linear-gradient(90deg, $color1, $color2);
+    }
+    
+    @mixin boxShadow($verticalSize, $blurSize, $color){
+        box-shadow: 0 $verticalSize $blurSize $color;
+    }
+    
+    @mixin border($size,$color) {
+        border: $size solid $color ;
+        }
+    
+        
+    @mixin borderBottom($size,$color) {
+        border-bottom: $size solid $color ;
+        }
+    
+    @mixin gradientBackground{
+        background-image: linear-gradient(to right bottom, $color-blue, $color-green);
+    }
+    
+    
+    @mixin flexCenter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    
+    
+    @mixin respond($breakpoint){
+        @if $breakpoint == 'phone' {
+     @media (max-width: $phone){
+    @content;
+        }
+        }
+         @else if $breakpoint == 'tablet' {
+     @media (max-width: $tablet){
+    @content;
+        }
+        }
+    
+         @else if $breakpoint == 'large-Tablet' {
+     @media (max-width: $largeTablet){
+    @content;
+        }
+        }
+         @else if $breakpoint == 'largeTablet' {
+     @media (min-width: $largeTablet){
+    @content;
+        }
+        }
+        @else if $breakpoint == 'desktop' {
+     @media (min-width: $desktop){
+    @content;
+        }
+        }
+       
+    }

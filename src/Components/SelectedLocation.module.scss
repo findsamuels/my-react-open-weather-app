@@ -1,0 +1,38 @@
+@import '../styles/main.scss';
+
+.SelectedLocation{
+color: $color-white;
+margin: 0 auto;
+text-align: center;
+padding: 2rem;
+
+}
+
+
+.SelectedLocationText{
+opacity: .8;
+}
+
+.selectedForcast{
+display: flex;
+justify-content: center;
+flex-wrap: nowrap;
+}
+
+.SelectedIcon{
+font-size: 10rem;
+padding-right: 1rem;
+}
+
+.selectedTemperature{
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+font-size: 6rem;
+padding: 0;
+span{
+text-transform: uppercase;
+font-size: 1.4rem;
+padding-left: 1rem;
+}
+}

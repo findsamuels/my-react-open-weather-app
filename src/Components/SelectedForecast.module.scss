@@ -1,0 +1,29 @@
+@import '../styles/main.scss';
+
+.SelectedForecast{
+    padding: 2rem;
+    
+    color: $color-white;
+    margin: 0 auto;
+    font-weight: lighter;
+    width: 80%;
+    position: relative;
+
+    .SelectedForecastCol{
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+
+    }
+}
+
+.foreCastOverLay{
+    position: absolute;
+    width: 100%;
+    background-color: $color-grey;
+    opacity: .2;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+}
