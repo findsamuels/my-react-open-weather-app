@@ -9,7 +9,6 @@ function App() {
     <div style={{backgroundImage: `url(${weatherBack})`}}  className={classes.App}>
      <Layout/>
 
-    
     </div>
   );
 }
