@@ -88,14 +88,23 @@ h4{
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: .8;
+    position: relative;
 
-    h4{
+    h2{
         color: $color-white;
         padding: 5rem;
-        background-color: $color-grey;
         line-height: 3rem;
         font-weight: lighter;
         
     }
+}
+
+.pendingForeCastOverlay{
+    position: absolute;
+    width: 100%;
+    background-color: $color-grey;
+    opacity: .2;
+    height: 100%;
+    top: 0;
+    left: 0;
 }

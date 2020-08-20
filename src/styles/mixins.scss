@@ -16,7 +16,7 @@
         }
     
     @mixin gradientBackground{
-        background-image: linear-gradient(to right bottom, $color-blue, $color-green);
+        background-image: linear-gradient(to bottom, $color-lightBlue, $color-blue);
     }
     
     

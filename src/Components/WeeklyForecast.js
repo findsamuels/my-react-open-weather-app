@@ -79,13 +79,13 @@ if(forecastData){
                     <Row className={classes.previewForcast}>
         <Col className={classes.weeklyWeathers}>Day</Col>
         <Col  className={classes.weeklyWeathers}> <img className={classes.SelectedIcon} src={`/assets/img/weatherIcon/${weatherIcon}.png`} alt={weatherIcon}/></Col>
-        <Col  className={classes.weeklyWeathers}>{fd.temp.day}°</Col>
+        <Col  className={classes.weeklyWeathers}>{ Math.floor(fd.temp.day)}°</Col>
         
         </Row>
         <Row className={classes.previewForcast}>
         <Col className={classes.weeklyWeathers}>Night</Col>
         <Col  className={classes.weeklyWeathers}> <img className={classes.SelectedIcon} src={`/assets/img/weatherIcon/${weatherIcon}.png`} alt={weatherIcon}/></Col>
-        <Col  className={classes.weeklyWeathers}>{fd.temp.night}°</Col>
+        <Col  className={classes.weeklyWeathers}>{ Math.floor(fd.temp.night)}°</Col>
         
         </Row>
        
@@ -107,7 +107,8 @@ if(forecastData){
                 
                {weekForeCast}
                   </Row> : <div className={classes.pendingForeCast}>
-                    <h4>ENTER THE NAME OF A LOCATION TO SEE THE FORECASTS</h4>
+                    <h2>ENTER THE NAME OF A LOCATION TO SEE THE FORECASTS</h2>
+                    <div className={classes.pendingForeCastOverlay}></div>
                     </div>}
 
             

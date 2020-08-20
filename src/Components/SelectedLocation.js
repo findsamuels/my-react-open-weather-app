@@ -28,7 +28,7 @@ const SelectedLocation = props => {
                   <img className={classes.SelectedIcon} src={`/assets/img/weatherIcon/01d.png`} alt={weatherIcon}/>  }
 
         
-<h2 className={classes.selectedTemperature}> {weather? main.temp + '°' : '24.02°'}  <span> { weatherD? weatherD :  'Sunny Spells'}</span></h2>
+<h2 className={classes.selectedTemperature}> {weather? Math.floor(main.temp) + '°' : '24°'}  <span> { weatherD? weatherD :  'Sunny Spells'}</span></h2>
     </div>
             
         </div>
