@@ -20,15 +20,15 @@ const SelectedLocation = props => {
         <div className={classes.SelectedLocation}>
             <div className={classes.SelectedLocationText}>
    
-     {props.address? <h1>{props.address}</h1> : <h1>Lanzarote Spain</h1> }
-            <p>{props.date}</p>
+     {props.address? <h1>{props.address}</h1> : null }
+          {props.address? <p>{props.date}</p> : null }  
             </div>
             <div  className={classes.selectedForcast}>
                 {weather?  <img className={classes.SelectedIcon} src={`/assets/img/weatherIcon/${weatherIcon}.png`} alt={weatherIcon}/> : 
-                  <img className={classes.SelectedIcon} src={`/assets/img/weatherIcon/01d.png`} alt={weatherIcon}/>  }
+                 null }
 
         
-<h2 className={classes.selectedTemperature}> {weather? Math.floor(main.temp) + '°' : '24°'}  <span> { weatherD? weatherD :  'Sunny Spells'}</span></h2>
+<h2 className={classes.selectedTemperature}> {weather? Math.floor(main.temp) + '°' : null}  <span> { weatherD? weatherD :  null}</span></h2>
     </div>
             
         </div>

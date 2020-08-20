@@ -15,11 +15,13 @@
 
     h3{
 color: $color-white;
+padding: 2rem 0;
     }
 }
 
 .WeeklyForeCast{
 margin: 0 auto;
+margin-bottom: 20rem;;
 justify-content: center;
 width: 90%;
 
@@ -60,7 +62,7 @@ h4{
 
 .previewForcast{
     display: flex;
-    
+    align-items: center;
     margin: 1rem auto;
     width: 100%;
     }

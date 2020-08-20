@@ -3,9 +3,11 @@
 
 .App {
 min-width: 100%;
+width: 100%;
 margin: auto;
   box-sizing: border-box;
-
+  @include gradientBackground;
+  overflow-x: hidden;
 
  
 }

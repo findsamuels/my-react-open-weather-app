@@ -9,6 +9,8 @@ const CurrentForeCasts = () => {
 
     const place = useSelector(state => state.placeReducer.place)
     const location = useSelector(state => state.placeReducer.location)
+    const auth = useSelector(state => state.placeReducer.auth)
+
 
     const [weatherData, setWeatherData] = useState('')
     const [retrievedPlace, setRetrievedPlace] = useState('')
@@ -16,17 +18,17 @@ const CurrentForeCasts = () => {
 
     useEffect(() => {
 
-      if(place != null){
+      if(auth){
         const {formatted_address} = place
         setRetrievedPlace(formatted_address)
         
       
       }
-    }, [place])
+    }, [place, auth])
 
      useEffect(() => {
 
-        if(location){
+        if(auth){
             let Weatherurl = `https://api.openweathermap.org/data/2.5/weather?lat=${location.lat}&lon=${location.lng}&appid=${process.env.REACT_APP_OPEN_WEATHER_API}&units=metric`
      
      
@@ -42,7 +44,7 @@ const CurrentForeCasts = () => {
             })
           }
 
-     }, [location])
+     }, [location, auth])
     
 
     
@@ -75,17 +77,22 @@ const CurrentForeCasts = () => {
      myDate = `${day[myDate.getDay()-1]}, ${myDate.getDate()} ${
        months[myDate.getMonth()]
      }`;
+  
     return (
 
         <Row className={classes.CurrentForeCasts}>
-            <Col md='6'><SelectedLocation
+          {auth ? <React.Fragment><Col md='6'><SelectedLocation
             date={myDate}
             address={retrievedPlace}
             weatherData={weatherData}
             /></Col>
             <Col md='6'> <SelectedForecast
             weatherData={weatherData}
-            /></Col>
+            /></Col> </React.Fragment> : <div className={classes.pendingForeCast}>
+            <h2>ENTER A LOCATION TO SEE THE TODAY'S FORECAST</h2>
+            <div className={classes.pendingForeCastOverlay}></div>
+            </div>}
+            
             
            
         </Row>

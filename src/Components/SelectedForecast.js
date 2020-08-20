@@ -23,12 +23,12 @@ const SelectedForecast = props => {
         <React.Fragment>
 <Row className={classes.SelectedForecast}>
            
-           <Col className={classes.SelectedForecastCol} xs='6' md='4'> {main?  <span>{main.humidity}%</span> : <span>54%</span> } Humidity</Col>
-           <Col className={classes.SelectedForecastCol} xs='6' md='4'> {main?  <span>{main.pressure}</span> : <span>1011</span> }Pressure</Col>
-           <Col className={classes.SelectedForecastCol} xs='6' md='4'> {main?  <span>{Math.floor(main.feels_like)}°</span> : <span>18°</span> }Feels Like</Col>
-           <Col className={classes.SelectedForecastCol} xs='6' md='4'> {wind?  <span>Speed: {wind.speed}</span> : <span>Speed: 5.3</span> }Wind</Col>
-           <Col className={classes.SelectedForecastCol} xs='6' md='4'>{main?  <span>{Math.floor(main.temp_max)}°</span> : <span>26°</span> }Temp High</Col>
-    <Col className={classes.SelectedForecastCol} xs='6' md='4'> {main?  <span>{Math.floor(main.temp_min)}°</span> : <span>23°</span> }Temp Low</Col>
+           <Col className={classes.SelectedForecastCol} xs='6' md='4'> { main.humidity ? <span>{main.humidity + '%' }</span> : null}  Humidity</Col>
+           <Col className={classes.SelectedForecastCol} xs='6' md='4'>  {main.pressure? <span>{main.pressure}</span> : null} Pressure</Col>
+           <Col className={classes.SelectedForecastCol} xs='6' md='4'> {main.feels_like && <span>{Math.floor(main.feels_like )+ '°'}</span>}  Feels Like</Col>
+           <Col className={classes.SelectedForecastCol} xs='6' md='4'> {wind.speed &&  <span>Speed: {wind.speed}</span>} Wind</Col>
+           <Col className={classes.SelectedForecastCol} xs='6' md='4'> {main.temp_max && <span>{Math.floor(main.temp_max)+ '°'}</span>} Temp High</Col>
+    <Col className={classes.SelectedForecastCol} xs='6' md='4'> {main.temp_min && <span>{Math.floor(main.temp_min)+ '°'}</span>  } Temp Low</Col>
 
 
 
