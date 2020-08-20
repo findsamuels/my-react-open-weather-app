@@ -33,13 +33,13 @@ const WeeklyForecast = () => {
 
 
      
-let weatherMain;
+let weatherIcon;
 let weekForeCast;
 
 if(forecastData){
     weekForeCast = forecastData.daily.slice(0,7).map((fd,index) => {
    
-      weatherMain = fd.weather.map(wd => wd.main)
+      weatherIcon = fd.weather.map(wd => wd.icon)
         let unix_timestamp = fd.dt
     
         var date = new Date(unix_timestamp * 1000);
@@ -78,25 +78,25 @@ if(forecastData){
                     <h4>{myDate}</h4>
                     <Row className={classes.previewForcast}>
         <Col className={classes.weeklyWeathers}>Morn</Col>
-        <Col>{weatherMain}</Col>
+        <Col><img className={classes.SelectedIcon} src={`/assets/img/weatherIcon/${weatherIcon}.png`} alt={weatherIcon}/></Col>
         <Col  className={classes.weeklyWeathers}>{ Math.floor(fd.temp.morn)}°</Col>
         
         </Row>
         <Row className={classes.previewForcast}>
         <Col className={classes.weeklyWeathers}>Day</Col>
-        <Col>{weatherMain}</Col>
+        <Col><img className={classes.SelectedIcon} src={`/assets/img/weatherIcon/${weatherIcon}.png`} alt={weatherIcon}/></Col>
         <Col  className={classes.weeklyWeathers}>{ Math.floor(fd.temp.day)}°</Col>
         
         </Row>
          <Row className={classes.previewForcast}>
         <Col className={classes.weeklyWeathers}>Eve</Col>
-        <Col>{weatherMain}</Col>
+        <Col><img className={classes.SelectedIcon} src={`/assets/img/weatherIcon/${weatherIcon}.png`} alt={weatherIcon}/></Col>
         <Col  className={classes.weeklyWeathers}>{ Math.floor(fd.temp.eve)}°</Col>
         
         </Row>
         <Row className={classes.previewForcast}>
         <Col className={classes.weeklyWeathers}>Night</Col>
-        <Col>{weatherMain}</Col>
+        <Col><img className={classes.SelectedIcon} src={`/assets/img/weatherIcon/${weatherIcon}.png`} alt={weatherIcon}/></Col>
         <Col  className={classes.weeklyWeathers}>{ Math.floor(fd.temp.night)}°</Col>
         </Row>
        

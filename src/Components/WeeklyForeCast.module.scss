@@ -61,10 +61,11 @@ h4{
 }
 
 .previewForcast{
-    display: flex;
     align-items: center;
     margin: 1rem auto;
     width: 100%;
+    flex-wrap: nowrap;
+    justify-content: center;
     }
     
     .previewIcon{
